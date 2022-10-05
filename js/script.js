@@ -3,11 +3,6 @@ const cognomeUtente = prompt('è il tuo cognome ?');
 const coloreUtente = prompt('Qual è il tuo colore preferito ?');
 const etaUtente = prompt('Quanti anni hai ?');
 
-function validateUserName(nomeUtente){
-    var usernameRegex = /^[a-zA-Z0-9]+$/;
-    return usernameRegex.test(nomeUtente);
-  }
-
 const descrizione = ` 
 Benvenuto, tu sei ${nomeUtente} ${cognomeUtente}.
 Il tuo colore preferito è il ${coloreUtente},
@@ -18,3 +13,9 @@ const infoUtente = document.getElementById('mioId');
 
 infoUtente.innerHTML = descrizione;
 
+
+const passwordGener = "La tua password è : " + nomeUtente + cognomeUtente + coloreUtente + etaUtente;
+
+const passwordUtente = document.getElementById('myPassword');
+
+passwordUtente.innerHTML = passwordGener;
